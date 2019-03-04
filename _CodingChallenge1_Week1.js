@@ -24,3 +24,14 @@ function numbercheck(number) {
     console.log("" + number + ") is out of range", "");
 }
 }
+
+challenge.sort=function(array){
+	const sorted =[]
+		array.foreach((e1))=>array.foreach((e2)=>{
+		if(e1<e2){
+			sorted.push(e1)
+		}
+	}
+	);
+		return sorted;
+}
