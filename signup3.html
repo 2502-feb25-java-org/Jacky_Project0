@@ -52,7 +52,7 @@
 		</form>
 	</div>
 </body> -->
-<body>
+<body onload="loadstore(val);">
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,42 +87,45 @@
 			<div class="col">
 				<form action="http://foo.com" method="get">
 					<legend>Signup for Revature updates</legend>
-					<br>
 					<div class="form-group">
-						<label for="name"></label>Enter your name: </label>
+						<label for="fname"></label>Enter your first name: </label>
 					</div>
 					<div class="form-group">
-						<input type="text"class="form-control" name="name" placeholder="Name" id="name" required>
+						<input type="text"class="form-control" name="fname" placeholder="First Name" id="fname" onchange="functionstore(this.value);" required>
+						<label for="lname"></label>Enter your last name: </label>
+					</div>
+					<div class="form-group">
+						<input type="text"class="form-control" name="lname" placeholder="Last Name" id="lname" onchange="functionstore(this.value);" required>
 					</div>
 					<div class="form-group">
 						<label for="email">Enter your email: </label>
 					</div>
 					<div class="form-group">
-						<input type="email" class="form-control" name="email" placeholder="Email" id="email" required>
+						<input type="email" class="form-control" name="email1" placeholder="Email" id="email1" onchange="functionstore(this.value);" required>
 					</div>
 					<div class="form-group">
 						<label for="password">Enter your password: </label>
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control" name="password" placeholder="password" id="password" required>
+						<input type="password" class="form-control" name="password" placeholder="password" id="password" onchange="functionstore(this.value);" required>
 					</div>
 					<div class="form-group">
 						<label for="phone">Enter your Phone: </label>
 					</div>
 					<div class="form-group">
-						<input type="tel" class="form-control" name="phone" placeholder="XXX-XXX-XXXX" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+						<input type="tel" class="form-control" name="phone" placeholder="XXX-XXX-XXXX" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onchange="functionstore(this.value);" required>
 					</div>
 					<br>
 					<legend>Personal Info</legend>
 					<div>
 						<label for="Age">Age</label>
-						<input type="number" name="age" min=16 max=120 id="age" placeholder="age" required>
+						<input type="number" name="age" min=16 max=120 id="age" placeholder="age" onchange="functionstore(this.value);" required>
 					</div>
 					<div>
 						<label for="gender">Gender :
-							<label for="male">Male<input type="radio" name="gender" id="male" /></label>
-							<label for="female">Female<input type="radio" name="gender" id="female" /> </label>
-							<label for="others">Others<input type="radio" name="gender" id="others" /></label>
+							<label for="malegender">Male<input type="radio" name="gender" id="malegender" onchange="functionstore(this.value);"/></label>
+							<label for="femalegender">Female<input type="radio" name="gender" id="femalegender" onchange="functionstore(this.value);"/> </label>
+							<label for="othergender">Others<input type="radio" name="gender" id="othergender" onchange="functionstore(this.value);"/></label>
 						</label>
 					</div>
 					<div>
@@ -140,18 +143,18 @@
 						<label for="name"></label>Enter your name: </label>
 					</div>
 					<div class="form-group">
-						<input type="text"class="form-control" name="name" placeholder="Name" id="name" required>
+						<input type="text"class="form-control" name="name" placeholder="Name" id="name" onchange="functionstore(this.value);" required>
 					</div>
 					<div class="form-group">
 						<label for="email">Enter your email: </label>
 					</div>
 					<div class="form-group">
-						<input type="email" class="form-control" name="email" id="email" placeholder="Email"  required>
+						<input type="email" class="form-control" name="email" id="email" placeholder="Email" onchange="functionstore(this.value);" required>
 					</div>
 					<div class="form-group">
 						<label for="message">Your message</label>
 						<div class="md-form">
-							<textarea type="text" id="message" name="message" rows="5" placeholder="Enter your message here" class="form-control"></textarea>
+							<textarea type="text" id="message" name="message" rows="5" placeholder="Enter your message here" class="form-control" onchange="functionstore(this.value);" ></textarea>
 							
 						</div>
 						<div>
@@ -185,4 +188,5 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	crossorigin="anonymous"></script>
+	<script src="signup3.js"></script>
 </body>
