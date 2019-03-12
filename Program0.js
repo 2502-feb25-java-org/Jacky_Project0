@@ -162,6 +162,45 @@ function isNumberKeyhyphen(evt)
 		return false;
 	return true;
 }  
+
+function zip() {
+	var zip = document.getElementById("zipcode").value;
+	var city = document.getElementById("city");
+	var state = document.getElementById("state");
+	var country = document.getElementById("country");
+
+	const URL = "https://api.zip-codes.com/ZipCodesAPI.svc/1.0/QuickGetZipCodeDetails/" + zip + "?key=DEMOAPIKEY"
+	var xtr = new XMLHttpRequest();
+	var str;
+
+
+	xtr.onreadystatechange = function () {
+		if (this.readyState == 4 && this.status == 200) {
+          // parse JSON to Js Object
+          str = JSON.parse(xtr.response);
+          console.log(str);
+          if(str.City&&str.State){
+          city.value = str.City;
+          state.value = str.State;
+          country.value = "United States"
+
+          }
+          else{
+          	window.alert("Please fill in valid zipcode");
+          }
+/*          if(str!=undefined){
+          city.value = str.City;
+          state.value = str.State;
+          }
+          else if (str==undefined){
+          	console.log("Wrong zipcode");
+          }*/
+      }
+  }
+  xtr.open("get", URL, true);
+  xtr.send();
+
+}
 /*function zip() {
 		var clientKey = "VwDORvOmqS8uJFQ3eNn47BU2h99SURFVvIPz58vCqKwn0uRiwLs5P0hGhSsCFVAG";
 		var cache = {};

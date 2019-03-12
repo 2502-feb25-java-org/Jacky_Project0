@@ -95,7 +95,7 @@
 					</div>
 					<div class="input-group">
 						<label for="zipcode"></label>
-						<input type="text"class="form-control" name="zipcode" placeholder="Zipcode" id="zipcode" onkeypress="return isNumberKey(event)" oninput="functionstore(this.value);"class="input-small" required>&nbsp;<div class="text-error"></div>
+						<input type="text"class="form-control" name="zipcode" placeholder="Zipcode" id="zipcode" onkeypress="return isNumberKey(event)" onkeypress="return isNumberKey(event)" onchange="functionstore(this.value); zip();"class="input-small" maxlength="5" required>&nbsp;<div class="text-error"></div>
 
 						<label for="city"></label>
 						<input type="text"class="form-control" name="city" placeholder="City " id="city" onchange="functionstore(this.value);" required>
