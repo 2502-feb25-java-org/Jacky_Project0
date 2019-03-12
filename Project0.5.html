@@ -25,6 +25,7 @@
         var leftPressed = false;
         var score = 0;
         var interval = setInterval(draw, -score+50);
+        var combo = 0;
 
         document.addEventListener("keydown", keyDownHandler, false);
         document.addEventListener("keyup", keyUpHandler, false);
@@ -65,7 +66,7 @@
         function drawScore() {
             canvas.getContext("2d").font = "18px Times New Roman";
             canvas.getContext("2d").fillStyle = "#00ff00";
-            canvas.getContext("2d").fillText(score+" Collision", 8, 20);
+            canvas.getContext("2d").fillText(score+" Points          Combo x"+combo, 8, 20);
         }
 
         function draw() {
@@ -84,6 +85,8 @@
                 if(x > paddleX && x < paddleX + paddleWidth) {
                     dy = -dy;
                     score++;
+                    combo++;
+                    score+=(combo*1);
                 }
                 else {
                     document.location.reload();

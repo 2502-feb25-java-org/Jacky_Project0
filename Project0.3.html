@@ -65,14 +65,14 @@
 					<label for="lname"></label>
 					<input type="text"class="form-control" name="lname" placeholder="Last Name" id="lname" onkeypress="return isNumericKey(event)" onchange="functionstore(this.value);" required>&nbsp;
 					<label for="Age"></label>
-					<input type="number" name="age" min=16 max=100 id="age" placeholder="Age" onchange="functionstore(this.value);">
+					<input type="number" name="age" min=16 max=100 id="age" placeholder="Age" onchange="functionstore(this.value);" required>
 				</div>
 				<br>
 				<div class="input-group">
 					<label for="phone"></label>
 					<input type="tel" class="form-control" name="phone" placeholder="XXX-XXX-XXXX" id="phone" pattern="^\d{3}-\d{3}-\d{4}$" onkeypress="return isNumberKeyhyphen(event)" onchange="functionstore(this.value);" maxlength="12">&nbsp;
 					<label for="email"></label>
-					<input type="email" class="form-control" name="email1" placeholder="Email" id="email1" onchange="functionstore(this.value);">
+					<input type="email" class="form-control" name="email1" placeholder="Email" id="email1" onchange="functionstore(this.value);" required>
 				</div>
 				<div class="input-group">
 					<label for="gender">Gender :
@@ -95,20 +95,22 @@
 					</div>
 					<div class="input-group">
 						<label for="zipcode"></label>
-						<input type="text"class="form-control" name="zipcode" placeholder="Zipcode" id="zipcode" onkeypress="return isNumberKey(event)" onchange="functionstore(this.value);" oninput="zip(this.value);" required>&nbsp;
+						<input type="text"class="form-control" name="zipcode" placeholder="Zipcode" id="zipcode" onkeypress="return isNumberKey(event)" oninput="functionstore(this.value);"class="input-small" required>&nbsp;<div class="text-error"></div>
+
 						<label for="city"></label>
-						<input type="text"class="form-control" name="city" placeholder="City " id="city" onchange="functionstore(this.value);">
+						<input type="text"class="form-control" name="city" placeholder="City " id="city" onchange="functionstore(this.value);" required>
 					</div>
 					<div class="input-group">
 						<label for="state"></label>
-						<input type="text"class="form-control" name="state" placeholder="State" id="state" onchange="functionstore(this.value);" required>&nbsp;
+						<input type="text"class="form-control" name="state" placeholder="State" id="state" onchange="functionstore(this.value);" class="input-mini" required>&nbsp;
+
 						<label for="country"></label>
-						<input type="text"class="form-control" name="country" placeholder="Country" id="country" onchange="functionstore(this.value);">
+						<input type="text"class="form-control" name="country" placeholder="Country" id="country" onchange="functionstore(this.value);" required>
 					</div>
 					<div class="input-group">
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-							<label class="form-check-label" for="defaultCheck1">
+							<input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
+							<label class="form-check-label" for="defaultCheck1" >
 								Agree to Join
 							</label>&nbsp;
 						</div>

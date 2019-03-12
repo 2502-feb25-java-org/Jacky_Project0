@@ -25,6 +25,7 @@ function signupgo() {
 		){
 		window.location.replace("Project0.1.html");
 }
+else window.alert("Please fill in all the fields"); 
 }
 
 function functionstore() {
@@ -161,15 +162,13 @@ function isNumberKeyhyphen(evt)
 		return false;
 	return true;
 }  
-function zip() {
-		// IMPORTANT: Fill in your client key
-		var clientKey = "js-9qZHzu2Flc59Eq5rx10JdKERovBlJp3TQ3ApyC4TOa3tA8U7aVRnFwf41RpLgtE7";
-		
+/*function zip() {
+		var clientKey = "VwDORvOmqS8uJFQ3eNn47BU2h99SURFVvIPz58vCqKwn0uRiwLs5P0hGhSsCFVAG";
 		var cache = {};
 		var container = $("#example1");
 		var errorDiv = container.find("div.text-error");
 		
-		/** Handle successful response */
+		/** Handle successful response 
 		function handleResp(data)
 		{
 			// Check for error
@@ -227,4 +226,4 @@ function zip() {
 				}
 			}
 		}).trigger("change");
-	};
+	};*/
