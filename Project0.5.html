@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <canvas id="myCanvas" width="480" height="240"></canvas>
+    <canvas id="myCanvas" width="680" height="480"></canvas>
 
     <script>
         var canvas = document.getElementById("myCanvas");
@@ -65,7 +65,7 @@
 
         function drawScore() {
             canvas.getContext("2d").font = "18px Times New Roman";
-            canvas.getContext("2d").fillStyle = "#00ff00";
+            canvas.getContext("2d").fillStyle = "#000000";
             canvas.getContext("2d").fillText(score+" Points          Combo x"+combo, 8, 20);
         }
 

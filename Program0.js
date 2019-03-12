@@ -29,26 +29,29 @@ else window.alert("Please fill in all the fields");
 }
 
 function functionstore() {
-	if(document.getElementById("fname").value!=undefined&&document.getElementById("lname").value!=undefined&&document.getElementById("fname").value==document.getElementById("lname").value&&document.getElementById("fname").value!=""&&document.getElementById("fname").value!=""&&document.getElementById("mname").value!=""&&document.getElementById("mname").value!=undefined&&document.getElementById("fname").value==document.getElementById("mname").value){ 
-		console.log("First, Middle, and Last name can't be the same");
+	if(document.getElementById("fname").value!=undefined&&document.getElementById("lname").value!=undefined&&document.getElementById("mname").value!=undefined&&document.getElementById("fname").value!=""&&document.getElementById("lname").value!=""&&document.getElementById("mname").value!=""){
+		if(document.getElementById("fname").value==document.getElementById("lname").value||document.getElementById("fname").value==document.getElementById("mname").value||document.getElementById("mname").value==document.getElementById("lname").value){
+		//console.log("First, Middle, and Last name can't be the same");
+		window.alert("First, Middle, and Last name can't be the same");
 		document.getElementById("fname").value="";
 		document.getElementById("lname").value="";
 		document.getElementById("mname").value="";
 	}
-	localStorage.fname=document.getElementById("fname").value;
-	localStorage.lname=document.getElementById("lname").value;
-	localStorage.mname=document.getElementById("mname").value;
-	localStorage.zipcode=document.getElementById("zipcode").value;
-	localStorage.email1=document.getElementById("email1").value;
-	localStorage.phone=document.getElementById("phone").value;
-	localStorage.age=document.getElementById("age").value;
-	localStorage.add1=document.getElementById("add1").value;
-	localStorage.add2=document.getElementById("add2").value;
-	localStorage.city=document.getElementById("city").value;
-	localStorage.state=document.getElementById("state").value;
-	localStorage.country=document.getElementById("country").value;
+}
+localStorage.fname=document.getElementById("fname").value;
+localStorage.lname=document.getElementById("lname").value;
+localStorage.mname=document.getElementById("mname").value;
+localStorage.zipcode=document.getElementById("zipcode").value;
+localStorage.email1=document.getElementById("email1").value;
+localStorage.phone=document.getElementById("phone").value;
+localStorage.age=document.getElementById("age").value;
+localStorage.add1=document.getElementById("add1").value;
+localStorage.add2=document.getElementById("add2").value;
+localStorage.city=document.getElementById("city").value;
+localStorage.state=document.getElementById("state").value;
+localStorage.country=document.getElementById("country").value;
 
-	/*	localStorage.password=document.getElementById("password").value;*/
+/*	localStorage.password=document.getElementById("password").value;*/
 /*	localStorage.malegender=document.getElementById("malegender").checked;
 	localStorage.femalegender=document.getElementById("femalegender").checked;
 	localStorage.othergender=document.getElementById("othergender").checked;*/
@@ -180,9 +183,9 @@ function zip() {
           str = JSON.parse(xtr.response);
           console.log(str);
           if(str.City&&str.State){
-          city.value = str.City;
-          state.value = str.State;
-          country.value = "United States"
+          	city.value = str.City;
+          	state.value = str.State;
+          	country.value = "United States"
 
           }
           else{
