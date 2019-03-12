@@ -18,7 +18,6 @@ function signupgo() {
 		document.getElementById("phone").value,
 		document.getElementById("age").value,
 		document.getElementById("add1").value,
-		document.getElementById("add2").value,
 		document.getElementById("city").value,
 		document.getElementById("state").value,
 		document.getElementById("country").value!=0
