@@ -22,7 +22,7 @@ function signupgo() {
 		document.getElementById("state").value,
 		document.getElementById("country").value!=0
 		){
-		window.location.replace("Project0.1.html");
+		window.location.replace("Project0.4.html");
 }
 else window.alert("Please fill in all the fields"); 
 }
@@ -173,7 +173,7 @@ function showPosition(position) {
 		if (unit=="K") { dist = dist * 1.609344 }
 		//nautical miles
 	if (unit=="N") { dist = dist * 0.8684 }*/
-		return document.getElementById("demo").innerHTML = Math.ceil(dist) +" statute miles\r" + Math.ceil(kdist) +" kilometers\r" + Math.ceil(ndist) +" nautical miles\r"  ;
+		return document.getElementById("demo").innerHTML = Math.ceil(dist) +" statute miles\t" + Math.ceil(kdist) +" kilometers\t" + Math.ceil(ndist) +" nautical miles\t"  ;
 	}/*  document.getElementById("demo").innerHTML = "Latitude: " + position.coords.latitude + 
 	"<br>Longitude: " + position.coords.longitude;*/
 }
@@ -211,7 +211,7 @@ function zip() {
 	var state = document.getElementById("state");
 	var country = document.getElementById("country");
 
-	const URL = "https://api.zip-codes.com/ZipCodesAPI.svc/1.0/QuickGetZipCodeDetails/" + zip + "?key=DEMOAPIKEY"
+	const URL = "https://api.zip-codes.com/ZipCodesAPI.svc/1.0/QuickGetZipCodeDetails/" + zip + "?key=RU6Y5U4NSZLQ4H2S1U1W"
 	var xtr = new XMLHttpRequest();
 	var str;
 
