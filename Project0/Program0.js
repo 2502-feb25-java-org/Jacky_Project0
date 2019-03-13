@@ -72,6 +72,46 @@ function functionstoreone() {
 	localStorage.message=document.getElementById("message").value;
 }
 
+function loadtwo(){
+
+	if(localStorage.fname!=null){document.getElementById("fname").value=localStorage.fname;}
+	if(localStorage.lname!=null){document.getElementById("lname").value=localStorage.lname;}
+	if(localStorage.mname!=null){document.getElementById("mname").value=localStorage.mname;}
+	if(localStorage.zipcode!=null){document.getElementById("zipcode").value=localStorage.zipcode;}
+	if(localStorage.email1!=null){document.getElementById("email1").value=localStorage.email1;}
+	if(localStorage.phone!=null){document.getElementById("phone").value=localStorage.phone;}
+	if(localStorage.age!=null){document.getElementById("age").value=localStorage.age;}
+	if(localStorage.add1!=null){document.getElementById("add1").value=localStorage.add1;}
+	if(localStorage.add2!=null){document.getElementById("add2").value=localStorage.add2;}
+	if(localStorage.city!=null){document.getElementById("city").value=localStorage.city;}
+	if(localStorage.state!=null){document.getElementById("state").value=localStorage.state;}
+	if(localStorage.country!=null){document.getElementById("country").value=localStorage.country;}
+	if(localStorage.malegender=="true"){document.getElementById("malegender").checked = true;}
+	if(localStorage.femalegender=="true"){document.getElementById("femalegender").checked = true;}
+	if(localStorage.othergender=="true"){document.getElementById("othergender").checked = true;}
+}
+/*	if(document.getElementById("fname")!=null){
+		document.getElementById("fname").value=localStorage.fname;
+	}
+	if(document.getElementById("lname")!=null){
+		document.getElementById("lname").value=localStorage.lname;
+	}
+	if(document.getElementById("mname")!=null){
+		document.getElementById("mname").value=localStorage.mname;
+	}*/
+
+function loadone(){
+
+	if(localStorage.name!=null){document.getElementById("name").value=localStorage.name;}
+
+	if(localStorage.email!=null){document.getElementById("email").value=localStorage.email;}
+
+	if(localStorage.message!=null){document.getElementById("message").value=localStorage.message;}
+
+
+
+}
+
 /*function loadstore(val) {
 	if(document.getElementById("fname").value!=undefined&&document.getElementById("lname").value!=undefined&&document.getElementById("fname").value==document.getElementById("lname").value&&document.getElementById("fname").value!=""&&document.getElementById("fname").value!=""&&document.getElementById("mname").value!=""&&document.getElementById("mname").value!=undefined&&document.getElementById("fname").value==document.getElementById("mname").value){
 		console.log("First, Middle, and Last name can't be the same");
